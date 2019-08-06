@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wpf.Controls.PanAndZoom</name>
+    </assembly>
+    <members>
+        <member name="T:Wpf.Controls.PanAndZoom.MatrixHelper">
+            <summary>
+            WPF Matrix helper methods.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.MatrixHelper.Identity">
+            <summary>
+            Gets the identity matrix.
+            </summary>
+            <value>The identity matrix.</value>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.MatrixHelper.Translate(System.Double,System.Double)">
+            <summary>
+            Creates a translation matrix using the specified offsets.
+            </summary>
+            <param name="offsetX">X-coordinate offset.</param>
+            <param name="offsetY">Y-coordinate offset.</param>
+            <returns>The created translation matrix.</returns>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.MatrixHelper.TranslatePrepend(System.Windows.Media.Matrix,System.Double,System.Double)">
+            <summary>
+            Prepends a translation around the center of provided matrix.
+            </summary>
+            <param name="matrix">The matrix to prepend translation.</param>
+            <param name="offsetX">X-coordinate offset.</param>
+            <param name="offsetY">Y-coordinate offset.</param>
+            <returns>The created translation matrix.</returns>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.MatrixHelper.Scale(System.Double,System.Double)">
+            <summary>
+            Creates a matrix that scales along the x-axis and y-axis.
+            </summary>
+            <param name="scaleX">Scaling factor that is applied along the x-axis.</param>
+            <param name="scaleY">Scaling factor that is applied along the y-axis.</param>
+            <returns>The created scaling matrix.</returns>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.MatrixHelper.ScaleAt(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Creates a matrix that is scaling from a specified center.
+            </summary>
+            <param name="scaleX">Scaling factor that is applied along the x-axis.</param>
+            <param name="scaleY">Scaling factor that is applied along the y-axis.</param>
+            <param name="centerX">The center X-coordinate of the scaling.</param>
+            <param name="centerY">The center Y-coordinate of the scaling.</param>
+            <returns>The created scaling matrix.</returns>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.MatrixHelper.ScaleAtPrepend(System.Windows.Media.Matrix,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Prepends a scale around the center of provided matrix.
+            </summary>
+            <param name="matrix">The matrix to prepend scale.</param>
+            <param name="scaleX">Scaling factor that is applied along the x-axis.</param>
+            <param name="scaleY">Scaling factor that is applied along the y-axis.</param>
+            <param name="centerX">The center X-coordinate of the scaling.</param>
+            <param name="centerY">The center Y-coordinate of the scaling.</param>
+            <returns>The created scaling matrix.</returns>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.MatrixHelper.Skew(System.Single,System.Single)">
+            <summary>
+            Creates a skew matrix.
+            </summary>
+            <param name="angleX">Angle of skew along the X-axis in radians.</param>
+            <param name="angleY">Angle of skew along the Y-axis in radians.</param>
+            <returns>When the method completes, contains the created skew matrix.</returns>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.MatrixHelper.Rotation(System.Double)">
+            <summary>
+            Creates a matrix that rotates.
+            </summary>
+            <param name="radians">Angle of rotation in radians. Angles are measured clockwise when looking along the rotation axis.</param>
+            <returns>The created rotation matrix.</returns>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.MatrixHelper.Rotation(System.Double,System.Double,System.Double)">
+            <summary>
+            Creates a matrix that rotates about a specified center.
+            </summary>
+            <param name="angle">Angle of rotation in radians.</param>
+            <param name="centerX">The center X-coordinate of the rotation.</param>
+            <param name="centerY">The center Y-coordinate of the rotation.</param>
+            <returns>The created rotation matrix.</returns>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.MatrixHelper.Rotation(System.Double,System.Windows.Vector)">
+            <summary>
+            Creates a matrix that rotates about a specified center.
+            </summary>
+            <param name="angle">Angle of rotation in radians.</param>
+            <param name="center">The center of the rotation.</param>
+            <returns>The created rotation matrix.</returns>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.MatrixHelper.TransformPoint(System.Windows.Media.Matrix,System.Windows.Point)">
+            <summary>
+            Transforms a point by this matrix.
+            </summary>
+            <param name="matrix">The matrix to use as a transformation matrix.</param>
+            <param name="point">>The original point to apply the transformation.</param>
+            <returns>The result of the transformation for the input point.</returns>
+        </member>
+        <member name="T:Wpf.Controls.PanAndZoom.ZoomBorder">
+            <summary>
+            Pan and zoom control for WPF.
+            </summary>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.StretchModes">
+            <summary>
+            Gets available stretch modes.
+            </summary>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.ButtonNames">
+            <summary>
+            Gets available button names.
+            </summary>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.InvalidatedChild">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.PanButton">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomSpeed">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.Stretch">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomX">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomY">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.OffsetX">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.OffsetY">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.EnableConstrains">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.MinZoomX">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.MaxZoomX">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.MinZoomY">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.MaxZoomY">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.MinOffsetX">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.MaxOffsetX">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.MinOffsetY">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.MaxOffsetY">
+            <inheritdoc/>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.EnableInput">
+            <inheritdoc/>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.PanButtonProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.PanButton"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomSpeedProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomSpeed"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.StretchProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.Stretch"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomXProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomX"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomYProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomY"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.OffsetXProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.OffsetX"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.OffsetYProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.OffsetY"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.EnableConstrainsProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.EnableConstrains"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.MinZoomXProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.MinZoomX"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.MaxZoomXProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.MaxZoomX"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.MinZoomYProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.MinZoomY"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.MaxZoomYProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.MaxZoomY"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.MinOffsetXProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.MinOffsetX"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.MaxOffsetXProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.MaxOffsetX"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.MinOffsetYProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.MinOffsetY"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.MaxOffsetYProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.MaxOffsetY"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Wpf.Controls.PanAndZoom.ZoomBorder.EnableInputProperty">
+            <summary>
+            Identifies the <seealso cref="P:Wpf.Controls.PanAndZoom.ZoomBorder.EnableInput"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Wpf.Controls.PanAndZoom.ZoomBorder.Child">
+            <summary>
+            Gets or sets single child of a <see cref="T:Wpf.Controls.PanAndZoom.ZoomBorder"/> control.
+            </summary>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Wpf.Controls.PanAndZoom.ZoomBorder"/> class.
+            </summary>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Arranges the control's child.
+            </summary>
+            <param name="finalSize">The size allocated to the control.</param>
+            <returns>The space taken.</returns>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.Invalidate">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomTo(System.Double,System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.ZoomDeltaTo(System.Double,System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.StartPan(System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.PanTo(System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.Fill(System.Double,System.Double,System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.Uniform(System.Double,System.Double,System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.UniformToFill(System.Double,System.Double,System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.AutoFit(System.Double,System.Double,System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.ToggleStretchMode">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.Reset">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.Fill">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.Uniform">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.UniformToFill">
+            <inheritdoc/>
+        </member>
+        <member name="M:Wpf.Controls.PanAndZoom.ZoomBorder.AutoFit">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

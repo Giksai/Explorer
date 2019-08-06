@@ -1,0 +1,17 @@
+﻿<Window x:Class="JustTag.Controls.FileBrowser.FileCreater"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JustTag.Controls.FileBrowser"
+        mc:Ignorable="d" Height="167.334" Width="495.5" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Topmost="True">
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+    <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="490" Margin="0,0,-2,0">
+        <Button Content="Create" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Margin="10,90,0,0" Height="52" Click="Button_Click_1"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="310,90,0,0" Height="52" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Name="FileNameTXTBox"/>
+        <Label Content="File name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+    </Grid>
+</Window>

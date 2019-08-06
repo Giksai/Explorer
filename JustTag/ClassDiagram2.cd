@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JustTag.NavigationStack&lt;T&gt;">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAGABiAAAAAAAEQAAAAAAAAAAAACAA=</HashCode>
+      <FileName>NavigationStack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustTag.Utils">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAFAAAAAAAAgAAAAgAAAiAAQAAAAAAACE=</HashCode>
+      <FileName>Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustTag.Controls.FileBrowser.FileBrowser">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAGkAIAABgBAAAAEABQAAEEAAAEAAAAAJAACABIABg=</HashCode>
+      <FileName>Controls\FileBrowser\FileBrowser.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JustTag.Controls.FileBrowser.FileCreater">
+    <Position X="2.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\FileBrowser\FileCreater.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JustTag.Controls.PreviewerControls.FilePreviewer">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAEAAAAAAAAAAAAAAAIAAABAAQ=</HashCode>
+      <FileName>Controls\PreviewerControls\FilePreviewer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JustTag.Pages.MainWindow">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAABAAAAAAACAAAAEAAABAAAAACAAAAAAA=</HashCode>
+      <FileName>Pages\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JustTag.Controls.PreviewerControls.FolderPreviewer">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACgAAAAAAAAAEAQAAEAAgAAAAAACAAAAAAAAgABAAA=</HashCode>
+      <FileName>Controls\PreviewerControls\FolderPreviewer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JustTag.Controls.PreviewerControls.ImagePreviewer">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Controls\PreviewerControls\ImagePreviewer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JustTag.Controls.PreviewerControls.VideoPlayer">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAgBAAIAAAQAEAAACQAQQAAAAIjAAAAEAAgEIEBAAA=</HashCode>
+      <FileName>Controls\PreviewerControls\VideoPlayer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="JustTag.Controls.PreviewerControls.IPreviewerControl">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Controls\PreviewerControls\IPreviewerControl.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
